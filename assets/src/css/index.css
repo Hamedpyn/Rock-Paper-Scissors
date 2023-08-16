@@ -4,6 +4,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     margin: 0;
     padding: 0;
     font-family: poppins;
@@ -15,8 +16,13 @@ body {
     border-radius: 14px;
     background: #fff;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    margin-top: 200px;
     height: auto;
+    margin-top: 50px;
+}
+
+#title {
+    margin-top: 100px;
+    color: #6B6BFF;
 }
 
 #resultField {
