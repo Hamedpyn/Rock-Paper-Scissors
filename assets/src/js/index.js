@@ -41,6 +41,51 @@ gamesOption.forEach(item => {
     });
 });
 
-function gamesStatus(cpu, user, text) {
+let cpuCounter = 0; // Counter for CPU's wins
+let userCounter = 0; // Counter for user's wins
 
+function gamesStatus(cpu, user, text) {
+    // ro = Rock
+    // pa = Paper
+    // sc = Scissors
+    if (cpu === user) {
+        text.textContent = ' DRAW!!';
+        text.style.color = 'Black';
+
+    } else if (user.includes('ro') && cpu.includes('pa')) {
+        text.textContent = 'Computer Won!';
+        text.style.color = 'red';
+        cpuCounter++;
+        cpuResult.innerHTML = cpuCounter;
+
+    } else if (user.includes('ro') && cpu.includes('sc')) {
+        text.textContent = 'User Won!';
+        text.style.color = '#1ee21e';
+        userCounter++;
+        userResult.innerHTML = userCounter;
+
+    } else if (user.includes('pa') && cpu.includes('ro')) {
+        text.textContent = 'User Won!';
+        text.style.color = '#1ee21e';
+        userCounter++;
+        userResult.innerHTML = userCounter;
+
+    } else if (user.includes('pa') && cpu.includes('sc')) {
+        text.textContent = 'Computer Won!';
+        text.style.color = 'red';
+        cpuCounter++;
+        cpuResult.innerHTML = cpuCounter;
+
+    } else if (user.includes('sc') && cpu.includes('ro')) {
+        text.textContent = 'Computer Won!';
+        text.style.color = 'red';
+        cpuCounter++;
+        cpuResult.innerHTML = cpuCounter;
+
+    } else if (user.includes('sc') && cpu.includes('pa')) {
+        text.textContent = 'User Won!';
+        text.style.color = '#1ee21e';
+        userCounter++;
+        userResult.innerHTML = userCounter;
+    }
 }
