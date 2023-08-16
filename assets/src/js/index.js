@@ -29,5 +29,18 @@ gamesOption.forEach(item => {
         resultText.textContent = 'Wait...';
         // Resetting the result text color
         resultText.style.color = '';
+
+        setTimeout(() => {
+            // Generating a random index to select a random image from the array
+            let randomImg = Math.floor(Math.random() * 3);
+            // Setting the computer's selection field with the randomly selected image
+            computerField.src = imagesArray[randomImg];
+            // Calling the game status function to determine the result
+            gamesStatus(computerField.src, usersField.src, resultText);
+        }, 1000);
     });
 });
+
+function gamesStatus(cpu, user, text) {
+
+}
