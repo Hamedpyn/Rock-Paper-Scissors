@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+:is(body, #container) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    font-family: poppins;
+    height: auto;
+}
+
+#container {
+    width: 500px;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 200px;
+}
+
+#resultField {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #7D2AE8;
+    gap: 30px;
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+#gamesStatus {
+    display: flex;
+    gap: 100px;
+}
+
+#gamesStatus img {
+    width: 80px;
+}
+
+#usersField img {
+    rotate: 90deg;
+}
+
+#computerField img {
+    transform: rotate(-90deg) rotateY(180deg);
+}
